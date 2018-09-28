@@ -34,3 +34,10 @@ script:
 branches:
   only:
   - master
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GH_TOKEN}
+  file: build/mac/electron-vue-demo.app
+  skip_cleanup: true
+
